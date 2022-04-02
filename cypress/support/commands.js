@@ -25,3 +25,4 @@
 
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add('LogSpecFormat',(textToLog) => {cy.log('==='+textToLog+'===')})
+
