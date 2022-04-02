@@ -1,0 +1,7 @@
+{
+    "loginLink":".login",
+    "Email":"#email",
+    "password":"#passwd",
+    "submit":"#SubmitLogin > span",
+    "failresult":"ol > li"
+}

@@ -25,4 +25,19 @@
 
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add('LogSpecFormat',(textToLog) => {cy.log('==='+textToLog+'===')})
+Cypress.Commands.add('tatiana',(value)=>{
+    cy.fixture('curso').then((curso)=>{
+        cy.get(curso.searchBox).type(value);
+        cy.get(curso.searchButton).click();
+    })
+})
+Cypress.Commands.add('ingreso',(value)=>{
+    cy.fixture('login').then((login)=>{
+            cy.get(login.loginLink).click();
+            cy.get(login.Email).type("jeje");
+            cy.get(login.password).type('bobi');
+            cy.get(login.submit).click();
+            cy.get(login.failresult).should('contain','Invalid');
+        })
+    })
 
